@@ -1,0 +1,8 @@
+@import "shared/fonts";
+.button{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+  @include btnFont();
+}

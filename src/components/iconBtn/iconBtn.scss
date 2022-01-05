@@ -1,0 +1,36 @@
+@import "shared/fonts";
+
+.iconBtnCont{
+  position: relative;
+  .iconBtnLabel{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      @include btnFont();
+      color: var(--main-bg-color);
+    }
+  }
+  .iconBtn{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    transition: 0.3s background-color;
+
+    &:hover, &:focus{
+      cursor: pointer;
+      background-color: rgba(0,0,0,.05);
+    }
+  }
+}

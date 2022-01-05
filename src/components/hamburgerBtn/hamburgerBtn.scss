@@ -1,0 +1,29 @@
+.hamburgerBtn{
+  width: 45px;
+  height: 45px;
+  .hamburgerImg{
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-1-color);
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      right: 0;
+      width: 33px;
+      height: 2px;
+      background-color: var(--secondary-1-color);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 23px;
+      height: 2px;
+      background-color: var(--secondary-1-color);
+    }
+  }
+}

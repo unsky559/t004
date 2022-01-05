@@ -1,0 +1,7 @@
+@import "shared/fonts";
+.logo{
+  h1{
+    @include headerFont();
+    color: var(--secondary-1-color);
+  }
+}

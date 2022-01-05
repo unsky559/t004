@@ -1,0 +1,26 @@
+$padding-default: 15px;
+
+@mixin padDefault(){
+  padding-right: $padding-default;
+  padding-left: $padding-default;
+}
+
+@mixin margDefault(){
+  margin-left: $padding-default;
+  margin-right: $padding-default;
+}
+
+.container{
+  @include padDefault();
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $padding-default;
+  display: flex;
+}
+
+@mixin x($size) {
+  @include margDefault();
+  width: calc(100% / 12 * #{$size
+} - #{$padding-default} * 2);
+}
