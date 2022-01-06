@@ -1,0 +1,65 @@
+@import "shared/grid";
+@import "shared/fonts";
+.interactiveBanner{
+  flex-grow: 1;
+  min-height: 840px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .background{
+    flex-grow: 1;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .foreground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.25);
+
+    display: flex;
+    flex-direction: column;
+    .headerContent{
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      .posterDescription{
+        @include x(5);
+
+        .posterName{
+          @include medFont();
+          color: var(--main-bg-color);
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+        .posterDesc{
+          @include smFont();
+          color: var(--secondary-3-color);
+          margin-bottom: 30px;
+        }
+
+        .content{
+          @include x(1, 1);
+        }
+      }
+      .posterActions{
+        @include x(7);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+
+        *{
+          @include starMargin();
+        }
+
+      }
+    }
+    .bottomContent{
+      flex: 0 1 380px;
+      background-color: green;
+    }
+  }
+}

@@ -1,13 +1,13 @@
 $padding-default: 15px;
 
-@mixin padDefault(){
-  padding-right: $padding-default;
-  padding-left: $padding-default;
+@mixin padDefault($padding: $padding-default){
+  padding-right: $padding;
+  padding-left: $padding;
 }
 
-@mixin margDefault(){
-  margin-left: $padding-default;
-  margin-right: $padding-default;
+@mixin margDefault($margin: $padding-default){
+  margin-left: $margin;
+  margin-right: $margin;
 }
 
 .container{
@@ -19,8 +19,17 @@ $padding-default: 15px;
   display: flex;
 }
 
-@mixin x($size) {
+@mixin x($size, $sizeble: 12) {
   @include margDefault();
-  width: calc(100% / 12 * #{$size
-} - #{$padding-default} * 2);
+  width: calc(100% / #{$sizeble} * #{$size} - #{$padding-default} * 2);
+}
+
+@mixin starMargin($margin: $padding-default){
+  @include margDefault($margin);
+  &:first-child{
+    margin-left: 0;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
 }

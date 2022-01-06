@@ -3,12 +3,17 @@ import "./shared/reset.scss";
 import "./shared/colors_wh.scss";
 import "./shared/grid.scss";
 import Header from "./components/header/header";
+import Home from "./pages/home/home";
 
 const App = () => {
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh'
+        }}>
             <Header/>
-            <h1>Helloworld!</h1>
+            <Home/>
         </div>
     );
 };

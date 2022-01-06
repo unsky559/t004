@@ -1,8 +1,16 @@
 @import "shared/fonts";
 .button{
+  @include btnFont();
+  color: var(--main-bg-color);
   padding: 15px;
   border-radius: 5px;
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+}
+
+.transparentBtn{
   @include btnFont();
+  color: var(--main-bg-color);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  box-sizing: border-box;
 }
