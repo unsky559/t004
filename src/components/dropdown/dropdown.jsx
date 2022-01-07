@@ -1,5 +1,6 @@
 import React from 'react';
 import "./dropdown.scss";
+import DrpIcon from "../drpIcon/drpIcon";
 
 const Dropdown = () => {
     return (
@@ -9,7 +10,7 @@ const Dropdown = () => {
                     <span>
                         Hebrew
                     </span>
-                    <div className="drpIcon"></div>
+                    <DrpIcon/>
                 </div>
             </button>
         </div>

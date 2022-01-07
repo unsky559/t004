@@ -13,28 +13,4 @@
       margin-left: 10px;
     }
   }
-  .drpIcon{
-    $drp-icon-wid: 17px;
-    position: relative;
-    width: $drp-icon-wid;
-    &:after{
-      right: 0;
-
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: $drp-icon-wid/2 + 1;
-      background-color: var(--secondary-1-color);
-      transform: rotate(-30deg);
-    }
-    &:before{
-      left: 0;
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: $drp-icon-wid/2 + 1;
-      background-color: var(--secondary-1-color);
-      transform: rotate(30deg);
-    }
-  }
 }

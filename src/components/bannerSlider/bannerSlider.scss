@@ -1,0 +1,22 @@
+@import "shared/grid";
+.bannerSlider{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  & > *{
+    @include margDefault();
+    &:first-child{
+      margin-left: max(30px, calc((100vw - 1560px) / 2) + 15px);
+    }
+    &:last-child{
+      margin-right: max(30px, calc((100vw - 1560px) / 2) + 15px);
+    }
+  }
+}

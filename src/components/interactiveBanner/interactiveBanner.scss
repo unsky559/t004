@@ -58,8 +58,22 @@
       }
     }
     .bottomContent{
-      flex: 0 1 380px;
-      background-color: green;
+      flex: 0 1 auto;
+      background-color: var(--tonic-color);
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .container{
+        margin-top: 30px;
+        align-items: center;
+      }
+      .bottomSlider{
+        @include x(11);
+
+      }
+      .bottomControls{
+        @include x(1);
+        display: flex;
+      }
     }
   }
 }

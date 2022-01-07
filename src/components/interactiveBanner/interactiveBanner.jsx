@@ -2,6 +2,8 @@ import React from 'react';
 import "./interactiveBanner.scss";
 import IconBtn from "../iconBtn/iconBtn";
 import Button from "../button/button";
+import BannerSlider from "../bannerSlider/bannerSlider";
+import BannerSliderProgress from "../bannerSliderProgress/bannerSliderProgress";
 
 const InteractiveBanner = () => {
     return (
@@ -24,11 +26,20 @@ const InteractiveBanner = () => {
                     </div>
                 </div>
                 <div className="bottomContent">
-
+                    <BannerSlider/>
+                    <div className="container">
+                        <div className="bottomSlider">
+                            <BannerSliderProgress/>
+                        </div>
+                        <div className="bottomControls">
+                            <IconBtn icon="static/icons/arrow_back_default.png"/>
+                            <IconBtn icon="static/icons/arrow_next_default.png"/>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="background" style={{
-                'background-image': 'url(/static/images/background.png)'
+                'background-image': 'linear-gradient(transparent, #28282dcc), url(/static/images/background.png)'
             }}>
 
             </div>
