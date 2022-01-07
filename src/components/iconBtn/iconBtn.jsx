@@ -6,6 +6,9 @@ const IconBtn = (props) => {
     const iconAlt = "Icon" || props.iconAlt;
 
     const label = props.label;
+    const hoverLabel = props.hoverLabel || icon;
+    const big = props.big ? "big" : null;
+    const colorful = props.colorful ? "colorful" : null;
 
     return (
         <div className="iconBtnCont">
@@ -16,8 +19,9 @@ const IconBtn = (props) => {
                 </span>
                 </div>
             }
-            <button className="iconBtn">
-                <img src={icon} alt={iconAlt}/>
+            <button className={["iconBtn", big, colorful].join(" ")}>
+                <img src={icon} alt={iconAlt} className="label"/>
+                <img src={hoverLabel} alt={iconAlt} className="hoverLabel"/>
             </button>
         </div>
     );

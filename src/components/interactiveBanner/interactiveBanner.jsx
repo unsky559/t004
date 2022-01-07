@@ -32,8 +32,12 @@ const InteractiveBanner = () => {
                             <BannerSliderProgress/>
                         </div>
                         <div className="bottomControls">
-                            <IconBtn icon="static/icons/arrow_back_default.png"/>
-                            <IconBtn icon="static/icons/arrow_next_default.png"/>
+                            <IconBtn
+                                hoverLabel="static/icons/arrow_back_hover.png"
+                                icon="static/icons/arrow_back_default.png"/>
+                            <IconBtn
+                                hoverLabel="static/icons/arrow_next_hover.png"
+                                icon="static/icons/arrow_next_default.png"/>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,31 @@
+@import "shared/fonts";
+@import "shared/grid";
+.downloadSection{
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+
+  background-size: cover;
+
+  .promo{
+    @include x(3);
+    .promoSub{
+      @include medFont();
+      text-transform: uppercase;
+      color: var(--accent-light-color);
+      margin-bottom: 15px;
+    }
+    .promoTitile{
+      @include headerFont();
+      color: var(--main-bg-color);
+    }
+  }
+  .links{
+    @include x(3);
+    display: flex;
+    & > *{
+      @include starMargin(30px);
+    }
+  }
+}
