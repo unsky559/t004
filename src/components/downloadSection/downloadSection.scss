@@ -29,3 +29,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px){
+  .downloadSection{
+    .promo{
+      @include x(6);
+    }
+    .links{
+      @include x(6);
+      & > *{
+        @include starMargin(30px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 725px){
+  .downloadSection{
+    .container{
+      flex-wrap: wrap;
+    }
+    .promo{
+      @include x(12);
+    }
+    .links{
+      @include x(12);
+      margin-top: $padding-default * 2;
+      & > *{
+        @include starMargin(15px);
+      }
+    }
+  }
+}

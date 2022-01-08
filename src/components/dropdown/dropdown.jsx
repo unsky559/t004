@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./dropdown.scss";
 import DrpIcon from "../drpIcon/drpIcon";
 import DropdownBtn from "../dropdownBtn/dropdownBtn";
@@ -12,8 +12,18 @@ const Dropdown = (props) => {
         isOpen[1](!isOpen[0]);
     }
 
+    useEffect(() => {
+        if(isOpen[0]){
+            document.addEventListener("click", switchState);
+        }
+        return () => {
+            document.removeEventListener("click", switchState);
+        }
+    }, [isOpen[0]]);
+
     return (
-        <div className="dropdownContainer">
+        <div className={props.className}>
+
             <div className="dropdown" onClick={switchState}>
                 {header}
             </div>
@@ -23,6 +33,8 @@ const Dropdown = (props) => {
                     {body}
                 </div>
             }
+            <div className="dropdownContainer">
+            </div>
         </div>
     );
 };

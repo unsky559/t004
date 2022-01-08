@@ -3,9 +3,11 @@ import "./hamburgerBtn.scss";
 
 const HamburgerBtn = (props) => {
     return (
-        <button className="hamburgerBtn" onClick={props.onClick}>
-            <div className="hamburgerImg"></div>
-        </button>
+        <div className={props.className}>
+            <button className="hamburgerBtn" onClick={props.onClick}>
+                <div className="hamburgerImg"></div>
+            </button>
+        </div>
     );
 };
 

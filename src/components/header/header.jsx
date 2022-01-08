@@ -28,10 +28,11 @@ const Header = (props) => {
                 <div className="logoBlock">
                     <div className="logoGroup">
                         <Logo/>
+                        <Dropdown header={<IconBtn icon="static/icons/menu_dots.png"/>}>
+                            <DropdownControl/>
+                        </Dropdown>
                     </div>
-                    <Dropdown header={<IconBtn icon="static/icons/menu_dots.png"/>}>
-                        <DropdownControl/>
-                    </Dropdown>
+                    <HamburgerBtn className="showOnSm" onClick={openMenu}/>
                     <div className="notifyGroup">
                         <Dropdown header={<IconBtn icon="static/icons/icon_favorites.png"/>}>
                             <DropdownFavs/>
@@ -39,6 +40,7 @@ const Header = (props) => {
                         <Dropdown header={<IconBtn icon="static/icons/icon_message.png" label={5}/>}>
                             <DropdownMessages/>
                         </Dropdown>
+                        <IconBtn className="microSearch" icon="../static/icons/icon_search.png" />
                     </div>
                 </div>
                 <div className="searchBlock">

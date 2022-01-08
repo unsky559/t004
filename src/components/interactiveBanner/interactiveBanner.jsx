@@ -12,9 +12,9 @@ const InteractiveBanner = () => {
             imageUrl: "https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         },
         {
-            title: "Poster 2 name",
+            title: "Shrek 2",
             description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1626294096822-55e4512bc957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80"
+            imageUrl: "https://icdn.lenta.ru/images/2020/12/14/15/20201214153333319/pwa_list_rect_1024_b482663c5eb139c66c39134f0f4001e9.jpg"
         },
         {
             title: "Span text",

@@ -12,6 +12,9 @@
       @include x(4);
       display: flex;
       align-items: center;
+      .microSearch{
+        display: none;
+      }
     }
     .searchBlock{
       @include x(4);
@@ -34,11 +37,102 @@
   }
 
   .logoGroup{
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    .logo{
+      margin-right: 15px;
+    }
   }
   .notifyGroup{
     display: inherit;
     margin-right: 15px;
     margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .header{
+    .container{
+      .logoBlock{
+        @include x(5);
+      }
+      .searchBlock{
+        @include x(3);
+      }
+      .sideBlock{
+        @include x(5);
+      }
+    }
+
+    .logoGroup{
+      margin-right: 15px;
+    }
+    .notifyGroup{
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1095px){
+  .header{
+    .container{
+      .logoBlock{
+        @include x(5);
+        .microSearch{
+          display: block;
+        }
+      }
+      .searchBlock{
+        display: none;
+      }
+      .sideBlock{
+        @include x(7);
+      }
+    }
+
+    .logoGroup{
+      margin-right: 15px;
+    }
+    .notifyGroup{
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.showOnSm{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  .hideOnSm{
+    display: none;
+  }
+  .showOnSm{
+    display: block;
+  }
+  .header{
+    .container{
+      .logoBlock{
+        @include x(12);
+        justify-content: space-between;
+      }
+      .searchBlock{
+        display: none;
+      }
+      .sideBlock{
+        display: none;
+      }
+    }
+
+    .logoGroup{
+      margin-right: 15px;
+    }
+    .notifyGroup{
+      margin-right: 15px;
+      margin-left: 15px;
+      display: none;
+    }
   }
 }
