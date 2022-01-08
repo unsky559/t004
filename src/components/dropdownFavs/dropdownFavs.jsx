@@ -15,8 +15,8 @@ const DropdownFavs = () => {
                 </div>
 
                 <div className="controls">
-                    <IconBtn icon="../static/icons/icon_heard.png"
-                             hoverLabel="../static/icons/icon_heard_d.png"/>
+                    <IconBtn icon="static/icons/icon_heard.png"
+                             hoverLabel="static/icons/icon_heard_d.png"/>
                 </div>
             </button>
         </div>

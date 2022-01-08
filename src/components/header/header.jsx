@@ -40,7 +40,7 @@ const Header = (props) => {
                         <Dropdown header={<IconBtn icon="static/icons/icon_message.png" label={5}/>}>
                             <DropdownMessages/>
                         </Dropdown>
-                        <IconBtn className="microSearch" icon="../static/icons/icon_search.png" />
+                        <IconBtn className="microSearch" icon="static/icons/icon_search.png" />
                     </div>
                 </div>
                 <div className="searchBlock">

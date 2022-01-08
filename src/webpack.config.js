@@ -19,7 +19,7 @@ module.exports = {
             title: 'Title',
             template: path.resolve(__dirname, 'index.html'),
             inject: 'head',
-            publicPath: "/"
+            publicPath: "./"
         }),
         new CopyPlugin({
             patterns: [

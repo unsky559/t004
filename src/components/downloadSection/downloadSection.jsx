@@ -5,7 +5,7 @@ import IconBtn from "../iconBtn/iconBtn";
 const DownloadSection = () => {
     return (
         <div className="downloadSection" style={{
-            "background-image": "url(../static/images/bg_yooosi_app-min.png)"
+            "background-image": "url(static/images/bg_yooosi_app-min.png)"
         }}>
             <div className="container">
 

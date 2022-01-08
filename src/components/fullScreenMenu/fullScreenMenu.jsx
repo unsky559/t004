@@ -40,8 +40,8 @@ const FullScreenMenu = (props) => {
                             <section className="downloadApp">
                                 <h4 className="downloadTitle">Download app</h4>
                                 <div className="iconLinks">
-                                    <a href=""><img src="../static/icons/img-play-store.png" alt=""/></a>
-                                    <a href=""><img src="../static/icons/img-app-store.png" alt=""/></a>
+                                    <a href=""><img src="static/icons/img-play-store.png" alt=""/></a>
+                                    <a href=""><img src="static/icons/img-app-store.png" alt=""/></a>
                                 </div>
                             </section>
                         </div>
