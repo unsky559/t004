@@ -1,0 +1,1240 @@
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./shared/reset.scss ***!
+  \************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./shared/colors_wh.scss ***!
+  \****************************************************************************************************************/
+body {
+  --main-bg-color: #ffffff;
+  --accent-color: #8d76b2;
+  --accent-light-color: #cbb8ea;
+  --secondary-1-color: #28282d;
+  --secondary-2-color: #4c4c50;
+  --secondary-3-color: #e6e6ee;
+  --secondary-4-color: #999aa5;
+  --secondary-5-color: #f5f9fa;
+  --tonic-color: #28282dcc;
+}
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./shared/grid.scss ***!
+  \***********************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/header/header.scss ***!
+  \************************************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid var(--secondary-3-color);
+  display: flex;
+  align-items: center;
+}
+.header .container .logoBlock {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 4 - 15px * 2);
+  display: flex;
+  align-items: center;
+}
+.header .container .logoBlock .microSearch {
+  display: none;
+}
+.header .container .searchBlock {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 4 - 15px * 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .container .sideBlock {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 4 - 15px * 2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .container .sideBlock > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.header .container .sideBlock > *:first-child {
+  margin-left: 0;
+}
+.header .container .sideBlock > *:last-child {
+  margin-right: 0;
+}
+.header .logoGroup {
+  display: flex;
+  align-items: center;
+}
+.header .logoGroup .logo {
+  margin-right: 15px;
+}
+.header .notifyGroup {
+  display: inherit;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+  .header .container .logoBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 5 - 15px * 2);
+  }
+  .header .container .searchBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 3 - 15px * 2);
+  }
+  .header .container .sideBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 5 - 15px * 2);
+  }
+  .header .logoGroup {
+    margin-right: 15px;
+  }
+  .header .notifyGroup {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .header .container .logoBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 5 - 15px * 2);
+  }
+  .header .container .logoBlock .microSearch {
+    display: block;
+  }
+  .header .container .searchBlock {
+    display: none;
+  }
+  .header .container .sideBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 7 - 15px * 2);
+  }
+  .header .logoGroup {
+    margin-right: 15px;
+  }
+  .header .notifyGroup {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+.showOnSm {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .hideOnSm {
+    display: none;
+  }
+
+  .showOnSm {
+    display: block;
+  }
+
+  .header .container .logoBlock {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 12 - 15px * 2);
+    justify-content: space-between;
+  }
+  .header .container .searchBlock {
+    display: none;
+  }
+  .header .container .sideBlock {
+    display: none;
+  }
+  .header .logoGroup {
+    margin-right: 15px;
+  }
+  .header .notifyGroup {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: none;
+  }
+}
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/logo/logo.scss ***!
+  \********************************************************************************************************************/
+.logo h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-1-color);
+}
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/iconBtn/iconBtn.scss ***!
+  \**************************************************************************************************************************/
+.iconBtnCont {
+  position: relative;
+}
+.iconBtnCont .iconBtnLabel {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBtnCont .iconBtnLabel span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+}
+.iconBtnCont .iconBtn {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.iconBtnCont .iconBtn .hoverLabel {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.iconBtnCont .iconBtn .label {
+  transition: opacity 0.3s;
+}
+.iconBtnCont .iconBtn:hover, .iconBtnCont .iconBtn:focus {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.iconBtnCont .iconBtn:hover .hoverLabel, .iconBtnCont .iconBtn:focus .hoverLabel {
+  opacity: 1;
+}
+.iconBtnCont .iconBtn:hover .label, .iconBtnCont .iconBtn:focus .label {
+  opacity: 0;
+}
+.iconBtnCont .iconBtn.big {
+  height: 60px;
+  width: 60px;
+}
+.iconBtnCont .iconBtn.colorful {
+  background-color: var(--accent-color);
+}
+.iconBtnCont .iconBtn.colorful:hover, .iconBtnCont .iconBtn.colorful:focus {
+  background-color: var(--main-bg-color);
+}
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/search/search.scss ***!
+  \************************************************************************************************************************/
+.searchContainer {
+  position: relative;
+}
+.searchContainer .search {
+  height: 40px;
+  max-width: 360px;
+  display: flex;
+  border: 1px solid var(--secondary-3-color);
+}
+.searchContainer .search input {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-2-color);
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+}
+.searchContainer .search button {
+  width: 80px;
+  height: inherit;
+}
+.searchContainer .searchResults {
+  position: absolute;
+  width: 100%;
+  border: 1px solid var(--secondary-3-color);
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  z-index: 1;
+  background-color: var(--main-bg-color);
+  padding: 10px 0;
+}
+.searchContainer .searchResults button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-1-color);
+  padding: 10px 18px;
+  width: 100%;
+  text-align: start;
+}
+.searchContainer .searchResults button:hover, .searchContainer .searchResults button:focus {
+  background-color: var(--secondary-5-color);
+  cursor: pointer;
+}
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdown/dropdown.scss ***!
+  \****************************************************************************************************************************/
+.dropdownContainer {
+  position: relative;
+}
+.dropdownContainer .dropdown_drop {
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+}
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/drpIcon/drpIcon.scss ***!
+  \**************************************************************************************************************************/
+.drpIcon {
+  position: relative;
+  width: 17px;
+}
+.drpIcon:after {
+  right: 0;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  background-color: var(--secondary-1-color);
+  transform: rotate(-45deg);
+  border-radius: 1px;
+}
+.drpIcon:before {
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10.5px;
+  background-color: var(--secondary-1-color);
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+.drpIcon.alternate:after {
+  background-color: var(--main-bg-color);
+}
+.drpIcon.alternate:before {
+  background-color: var(--main-bg-color);
+}
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownBtn/dropdownBtn.scss ***!
+  \**********************************************************************************************************************************/
+.dropdownBtn .dropdownHeader {
+  display: flex;
+  align-items: center;
+}
+.dropdownBtn .dropdownHeader span {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--secondary-1-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+.dropdownBtn .dropdownHeader .drpIcon {
+  margin-left: 10px;
+}
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/button/button.scss ***!
+  \************************************************************************************************************************/
+.button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+
+.transparentBtn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  box-sizing: border-box;
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/hamburgerBtn/hamburgerBtn.scss ***!
+  \************************************************************************************************************************************/
+.hamburgerBtn {
+  width: 45px;
+  height: 45px;
+}
+.hamburgerBtn .hamburgerImg {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary-1-color);
+}
+.hamburgerBtn .hamburgerImg:before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+  width: 33px;
+  height: 2px;
+  background-color: var(--secondary-1-color);
+}
+.hamburgerBtn .hamburgerImg:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 23px;
+  height: 2px;
+  background-color: var(--secondary-1-color);
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownMessages/dropdownMessages.scss ***!
+  \********************************************************************************************************************************************/
+.dropdownMessages {
+  position: absolute;
+  z-index: 2;
+  width: 400px;
+  border: 1px solid var(--secondary-3-color);
+  border-radius: 3px;
+}
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownMessage/dropdownMessage.scss ***!
+  \******************************************************************************************************************************************/
+.dropdownMessage {
+  padding: 15px 25px;
+  display: flex;
+  background-color: var(--main-bg-color);
+}
+.dropdownMessage:hover, .dropdownMessage:focus {
+  background-color: var(--secondary-5-color);
+  cursor: pointer;
+}
+.dropdownMessage .userPic img {
+  margin-right: 15px;
+}
+.dropdownMessage .content {
+  flex-grow: 1;
+}
+.dropdownMessage .content .contentHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.dropdownMessage .content .contentHeader .username {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--secondary-1-color);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.dropdownMessage .content .contentHeader .date {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 700;
+}
+.dropdownMessage .content .contentBody {
+  width: 100%;
+}
+.dropdownMessage .content .contentBody .messagePreview {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-2-color);
+  max-height: 48px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/userPic/userPic.scss ***!
+  \**************************************************************************************************************************/
+.userPic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownLangSwitch/dropdownLangSwitch.scss ***!
+  \************************************************************************************************************************************************/
+.dropdownLangSwitch {
+  z-index: 1;
+  margin-top: 25px;
+  margin-left: -15px;
+  position: absolute;
+  padding: 25px 30px;
+  border-radius: 3px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--secondary-3-color);
+}
+.dropdownLangSwitch ul li {
+  margin-bottom: 5px;
+}
+.dropdownLangSwitch ul li:last-child {
+  margin-bottom: 0;
+}
+.dropdownLangSwitch ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: var(--secondary-4-color);
+}
+.dropdownLangSwitch ul li.selected a {
+  color: var(--secondary-1-color);
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownFavs/dropdownFavs.scss ***!
+  \************************************************************************************************************************************/
+.dropdownFavs {
+  position: absolute;
+  z-index: 1;
+  width: 375px;
+  padding: 15px 0;
+  background-color: var(--main-bg-color);
+  border-radius: 3px;
+  border: 1px solid var(--secondary-3-color);
+}
+.dropdownFavs .favBtn {
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+.dropdownFavs .favBtn:hover, .dropdownFavs .favBtn:focus {
+  background-color: var(--secondary-5-color);
+  cursor: pointer;
+}
+.dropdownFavs .favBtn .userData {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.dropdownFavs .favBtn .userData .userPic {
+  margin-right: 15px;
+}
+.dropdownFavs .favBtn .userData .username {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--secondary-1-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/dropdownControl/dropdownControl.scss ***!
+  \******************************************************************************************************************************************/
+.dropdownControls {
+  min-width: 200px;
+  z-index: 1;
+  margin-top: 10px;
+  margin-left: -15px;
+  position: absolute;
+  border-radius: 3px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--secondary-3-color);
+}
+.dropdownControls ul.pad {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.dropdownControls ul li {
+  padding: 5px 30px;
+}
+.dropdownControls ul li:last-child {
+  margin-bottom: 0;
+}
+.dropdownControls ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-weight: 400;
+  color: var(--secondary-4-color);
+}
+.dropdownControls ul li.selected a {
+  color: var(--secondary-1-color);
+}
+.dropdownControls ul li.extended {
+  padding: 15px 30px;
+}
+.dropdownControls ul li.extended:hover {
+  background-color: var(--secondary-5-color);
+  cursor: pointer;
+}
+.dropdownControls .logoutGroup {
+  margin-top: 15px;
+}
+/*!****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/fullScreenMenu/fullScreenMenu.scss ***!
+  \****************************************************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.fullScreenMenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.fullScreenMenu .background {
+  height: inherit;
+  width: inherit;
+  background-color: var(--tonic-color);
+}
+.fullScreenMenu .foreground {
+  position: relative;
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: var(--secondary-1-color);
+  overflow-y: auto;
+}
+.fullScreenMenu .foreground .content {
+  padding-left: calc(100vw / 12 / 2 + 30px);
+  width: min(780px, calc(100% - 30px));
+  padding-top: 15px;
+}
+.fullScreenMenu .foreground .content .closeRow {
+  display: flex;
+  justify-content: flex-end;
+}
+.fullScreenMenu .foreground .content .bigLinks {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.fullScreenMenu .foreground .content .bigLinks ul li {
+  transition: padding-left 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.fullScreenMenu .foreground .content .bigLinks ul li {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.fullScreenMenu .foreground .content .bigLinks ul li:first-child {
+  margin-top: 0;
+}
+.fullScreenMenu .foreground .content .bigLinks ul li:last-child {
+  margin-bottom: 0;
+}
+.fullScreenMenu .foreground .content .bigLinks ul li:hover, .fullScreenMenu .foreground .content .bigLinks ul li:focus {
+  padding-left: 30px;
+}
+.fullScreenMenu .foreground .content .bigLinks ul li:hover a, .fullScreenMenu .foreground .content .bigLinks ul li:focus a {
+  color: var(--accent-color);
+}
+.fullScreenMenu .foreground .content .bigLinks ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+  transition: color 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.fullScreenMenu .foreground .content .downloadApp .downloadTitle {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-4-color);
+  margin-bottom: 30px;
+}
+.fullScreenMenu .foreground .content .downloadApp .iconLinks > * {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+.fullScreenMenu .foreground .content .downloadApp .iconLinks > *:first-child {
+  margin-left: 0;
+}
+.fullScreenMenu .foreground .content .downloadApp .iconLinks > *:last-child {
+  margin-right: 0;
+}
+.fullScreenMenu .foreground .content .downloadApp .iconLinks img {
+  height: 40px;
+}
+
+@media screen and (max-width: 775px) {
+  .fullScreenMenu .foreground {
+    width: 95%;
+  }
+  .fullScreenMenu .foreground .content {
+    padding-left: calc(100vw / 12 / 2 + 30px);
+    width: min(780px, calc(100% - 30px));
+    padding-top: 15px;
+  }
+  .fullScreenMenu .foreground .content .closeRow {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .fullScreenMenu .foreground .content .bigLinks {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li {
+    transition: padding-left 0.5s cubic-bezier(0, 0, 0, 1);
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li:first-child {
+    margin-top: 0;
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li:last-child {
+    margin-bottom: 0;
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li:hover, .fullScreenMenu .foreground .content .bigLinks ul li:focus {
+    padding-left: 30px;
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li:hover a, .fullScreenMenu .foreground .content .bigLinks ul li:focus a {
+    color: var(--accent-color);
+  }
+  .fullScreenMenu .foreground .content .bigLinks ul li a {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--main-bg-color);
+    transition: color 0.5s cubic-bezier(0, 0, 0, 1);
+  }
+  .fullScreenMenu .foreground .content .downloadApp .downloadTitle {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary-4-color);
+    margin-bottom: 30px;
+  }
+  .fullScreenMenu .foreground .content .downloadApp .iconLinks > * {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
+  .fullScreenMenu .foreground .content .downloadApp .iconLinks > *:first-child {
+    margin-left: 0;
+  }
+  .fullScreenMenu .foreground .content .downloadApp .iconLinks > *:last-child {
+    margin-right: 0;
+  }
+  .fullScreenMenu .foreground .content .downloadApp .iconLinks img {
+    height: 40px;
+  }
+}
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./pages/home/home.scss ***!
+  \***************************************************************************************************************/
+.homePage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.homePage .banner {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.homePage .download {
+  flex: 0 1 auto;
+}
+/*!**********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/interactiveBanner/interactiveBanner.scss ***!
+  \**********************************************************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.interactiveBanner {
+  flex-grow: 1;
+  min-height: 840px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.interactiveBanner .background {
+  position: relative;
+  flex-grow: 1;
+  z-index: -2;
+  background-color: var(--secondary-1-color);
+  overflow: hidden;
+}
+.interactiveBanner .background .bgUnderSplash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #28282dcc);
+  z-index: 0;
+}
+.interactiveBanner .background .bgImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  transition: 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.interactiveBanner .background .bgImage.loading {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+.interactiveBanner .foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+.interactiveBanner .foreground .headerContent {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+.interactiveBanner .foreground .headerContent .posterDescription {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 5 - 15px * 2);
+}
+.interactiveBanner .foreground .headerContent .posterDescription .posterName {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-width: 500;
+  color: var(--main-bg-color);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.interactiveBanner .foreground .headerContent .posterDescription .posterDesc {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-3-color);
+  margin-bottom: 30px;
+}
+.interactiveBanner .foreground .headerContent .posterDescription .content {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 1 * 1 - 15px * 2);
+  transition: 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.interactiveBanner .foreground .headerContent .posterDescription .content.loading {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+.interactiveBanner .foreground .headerContent .posterActions {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 7 - 15px * 2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+.interactiveBanner .foreground .headerContent .posterActions > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.interactiveBanner .foreground .headerContent .posterActions > *:first-child {
+  margin-left: 0;
+}
+.interactiveBanner .foreground .headerContent .posterActions > *:last-child {
+  margin-right: 0;
+}
+.interactiveBanner .foreground .bottomContent {
+  flex: 0 1 auto;
+  background-color: var(--tonic-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.interactiveBanner .foreground .bottomContent .container {
+  margin-top: 30px;
+  align-items: center;
+}
+.interactiveBanner .foreground .bottomContent .bottomSlider {
+  flex-grow: 1;
+}
+.interactiveBanner .foreground .bottomContent .bottomControls {
+  padding-left: 15px;
+  display: flex;
+}
+
+@media screen and (max-width: 940px) {
+  .interactiveBanner .foreground .headerContent .container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .interactiveBanner .foreground .headerContent .posterDescription {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 12 - 15px * 2);
+  }
+  .interactiveBanner .foreground .headerContent .posterActions {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 12 - 15px * 2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  .interactiveBanner .foreground .headerContent .posterActions > * {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .interactiveBanner .foreground .headerContent .posterActions > *:first-child {
+    margin-left: 0;
+  }
+  .interactiveBanner .foreground .headerContent .posterActions > *:last-child {
+    margin-right: 0;
+  }
+  .interactiveBanner .foreground .bottomContent {
+    flex: 0 1 auto;
+    background-color: var(--tonic-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .interactiveBanner .foreground .bottomContent .container {
+    margin-top: 30px;
+    align-items: center;
+  }
+  .interactiveBanner .foreground .bottomContent .bottomSlider {
+    flex-grow: 1;
+  }
+  .interactiveBanner .foreground .bottomContent .bottomControls {
+    padding-left: 15px;
+    display: flex;
+  }
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/bannerSlider/bannerSlider.scss ***!
+  \************************************************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.bannerSlider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.bannerSlider::-webkit-scrollbar {
+  display: none;
+}
+.bannerSlider > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.bannerSlider > *:first-child {
+  margin-left: max(30px, calc((100vw - 1560px) / 2) + 15px);
+}
+.bannerSlider > *:last-child {
+  margin-right: max(30px, calc((100vw - 1560px) / 2) + 15px);
+}
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/poster/poster.scss ***!
+  \************************************************************************************************************************/
+.poster {
+  min-width: 340px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+.poster:hover .posterForeground .posterButton, .poster.selected .posterForeground .posterButton {
+  bottom: 100%;
+  padding: 0px 20px;
+}
+.poster:hover .posterForeground .posterContenter, .poster.selected .posterForeground .posterContenter {
+  bottom: 0%;
+}
+.poster .posterForeground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.poster .posterForeground .posterButton {
+  transition: bottom 0.5s cubic-bezier(0, 0, 0, 1), padding 0.6s cubic-bezier(0, 0, 0, 1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: var(--tonic-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.poster .posterForeground .posterButton span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-bg-color);
+  text-transform: uppercase;
+}
+.poster .posterForeground .posterContenter {
+  transition: bottom 0.5s cubic-bezier(0, 0, 0, 1);
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: var(--tonic-color);
+}
+.poster .posterForeground .posterContenter .contenterControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.poster .posterForeground .posterContenter .contenterBody {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poster .posterForeground .posterContenter .contenterBody span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-width: 500;
+  color: var(--main-bg-color);
+  text-transform: uppercase;
+}
+.poster .posterForeground .posterContenter .contenterFooter {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+.poster .posterBackground {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poster .posterBackground img {
+  height: 100%;
+}
+/*!****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/bannerSliderProgress/bannerSliderProgress.scss ***!
+  \****************************************************************************************************************************************************/
+.bannerSliderProgress {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.bannerSliderProgress .progressBack {
+  height: 2px;
+  width: inherit;
+  background-color: var(--tonic-color);
+}
+.bannerSliderProgress .progress {
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: var(--main-bg-color);
+}
+.bannerSliderProgress.animate .progress {
+  animation-name: progress;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/downloadSection/downloadSection.scss ***!
+  \******************************************************************************************************************************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.downloadSection {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size: cover;
+}
+.downloadSection .promo {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 3 - 15px * 2);
+}
+.downloadSection .promo .promoSub {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-width: 500;
+  text-transform: uppercase;
+  color: var(--accent-light-color);
+  margin-bottom: 15px;
+}
+.downloadSection .promo .promoTitile {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+}
+.downloadSection .links {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 3 - 15px * 2);
+  display: flex;
+}
+.downloadSection .links > * {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.downloadSection .links > *:first-child {
+  margin-left: 0;
+}
+.downloadSection .links > *:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .downloadSection .promo {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 6 - 15px * 2);
+  }
+  .downloadSection .links {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 6 - 15px * 2);
+  }
+  .downloadSection .links > * {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .downloadSection .links > *:first-child {
+    margin-left: 0;
+  }
+  .downloadSection .links > *:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 725px) {
+  .downloadSection .container {
+    flex-wrap: wrap;
+  }
+  .downloadSection .promo {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 12 - 15px * 2);
+  }
+  .downloadSection .links {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 12 - 15px * 2);
+    margin-top: 30px;
+  }
+  .downloadSection .links > * {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .downloadSection .links > *:first-child {
+    margin-left: 0;
+  }
+  .downloadSection .links > *:last-child {
+    margin-right: 0;
+  }
+}
