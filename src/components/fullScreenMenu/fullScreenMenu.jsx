@@ -25,7 +25,7 @@ const FullScreenMenu = (props) => {
                     <div className="foreground">
                         <div className="content">
                             <div className="closeRow">
-                                <IconBtn icon = "../static/icons/close.png" onClick={closeMenu}/>
+                                <IconBtn icon = "static/icons/close.png" onClick={closeMenu}/>
                             </div>
                             <nav className="bigLinks">
                                 <ul>
