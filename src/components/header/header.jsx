@@ -13,8 +13,8 @@ import DropdownFavs from "../dropdownFavs/dropdownFavs";
 import DropdownControl from "../dropdownControl/dropdownControl";
 import FullScreenMenu from "../fullScreenMenu/fullScreenMenu";
 
-const Header = () => {
-    const menuState = useState(false);
+const Header = (props) => {
+    const menuState = props.menuState;
 
     const openMenu = () => {
         menuState[1](true);

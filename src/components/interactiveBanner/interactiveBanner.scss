@@ -1,5 +1,6 @@
 @import "shared/grid";
 @import "shared/fonts";
+@import "shared/animations";
 .interactiveBanner{
   flex-grow: 1;
   min-height: 840px;
@@ -8,9 +9,36 @@
   position: relative;
 
   .background{
+    position: relative;
     flex-grow: 1;
-    background-position: center;
-    background-size: cover;
+
+    z-index: -2;
+    background-color: var(--secondary-1-color);
+
+    overflow: hidden;
+
+    .bgUnderSplash{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, #28282dcc);
+      z-index: 0;
+    }
+    .bgImage{
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+
+      transition: $defaultTransitionTime $defaultCubic;
+      &.loading{
+        opacity: 0;
+        transform: scale(1.1);
+      }
+    }
   }
 
   .foreground{
@@ -21,12 +49,15 @@
 
     display: flex;
     flex-direction: column;
+    z-index: 1;
     .headerContent{
       flex-grow: 1;
       display: flex;
       align-items: flex-end;
       .posterDescription{
         @include x(5);
+
+
 
         .posterName{
           @include medFont();
@@ -42,6 +73,13 @@
 
         .content{
           @include x(1, 1);
+
+          transition: $defaultTransitionTime $defaultCubic;
+          &.loading{
+            transform: translateX(-150px);
+            opacity: 0;
+          }
+
         }
       }
       .posterActions{

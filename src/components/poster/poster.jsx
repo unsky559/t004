@@ -4,12 +4,14 @@ import DrpIcon from "../drpIcon/drpIcon";
 import Button from "../button/button";
 import IconBtn from "../iconBtn/iconBtn";
 
-const Poster = () => {
+const Poster = (props) => {
+    const data = props.content;
+    const selected = props.selected;
     return (
-        <div className="poster">
+        <div className={["poster", selected ? "selected" : null].join(" ")} onClick={props.onClick}>
             <div className="posterForeground">
                 <div className="posterButton">
-                    <span>SDA</span>
+                    <span>{data.title}</span>
                     <DrpIcon alternate/>
                 </div>
                 <div className="posterContenter">
@@ -18,7 +20,7 @@ const Poster = () => {
                         <Button>Start watching</Button>
                     </div>
                     <div className="contenterBody">
-                        <span>Test</span>
+                        <span>{data.title}</span>
                     </div>
                     <div className="contenterFooter">
                         <DrpIcon alternate/>
@@ -26,7 +28,7 @@ const Poster = () => {
                 </div>
             </div>
             <div className="posterBackground">
-                <img src="../static/images/img3.png" alt=""/>
+                <img src={data.imageUrl} alt=""/>
             </div>
         </div>
     );

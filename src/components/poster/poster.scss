@@ -7,7 +7,8 @@
   position: relative;
   overflow: hidden;
 
-  &:hover{
+  &:hover,
+  &.selected{
     .posterForeground{
       .posterButton{
         bottom: 100%;

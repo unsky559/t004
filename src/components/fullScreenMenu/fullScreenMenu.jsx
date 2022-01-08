@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./fullScreenMenu.scss";
 import IconBtn from "../iconBtn/iconBtn";
 
@@ -8,6 +8,15 @@ const FullScreenMenu = (props) => {
     const closeMenu = () => {
         enabled[1](false);
     }
+
+    useEffect(() => {
+       if(enabled[0]){
+           document.body.style.overflowY = 'hidden';
+       }else{
+           document.body.style.overflowY = 'auto';
+       }
+    });
+
 
     if(enabled[0]){
         return (

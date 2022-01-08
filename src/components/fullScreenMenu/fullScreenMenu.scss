@@ -17,7 +17,7 @@
     width: 50%;
     height: 100%;
     background-color: var(--secondary-1-color);
-    overflow-y: scroll;
+    overflow-y: auto;
     .content{
       padding-left: calc(100vw / #{$gridSize} / 2 + #{$padding-default * 2});
       width: min(#{$containerWidth / 2}, calc(100% - #{$padding-default * 2}));

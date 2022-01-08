@@ -2,6 +2,7 @@
 .dropdownContainer{
   position: relative;
   .dropdown_drop{
+    z-index: 9;
     position: absolute;
     width: 100%;
   }
