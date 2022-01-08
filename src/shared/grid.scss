@@ -1,4 +1,6 @@
 $padding-default: 15px;
+$containerWidth: 1560px;
+$gridSize: 12;
 
 @mixin padDefault($padding: $padding-default){
   padding-right: $padding;
@@ -10,16 +12,21 @@ $padding-default: 15px;
   margin-right: $margin;
 }
 
+@mixin margDefaultV($margin: $padding-default){
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
 .container{
   @include padDefault();
-  max-width: 1560px;
+  max-width: $containerWidth;
   width: 100%;
   margin: 0 auto;
   padding: 0 $padding-default;
   display: flex;
 }
 
-@mixin x($size, $sizeble: 12) {
+@mixin x($size, $sizeble: $gridSize) {
   @include margDefault();
   width: calc(100% / #{$sizeble} * #{$size} - #{$padding-default} * 2);
 }
@@ -31,5 +38,14 @@ $padding-default: 15px;
   }
   &:last-child{
     margin-right: 0;
+  }
+}
+@mixin starMarginV($margin: $padding-default){
+  @include margDefaultV($margin);
+  &:first-child{
+    margin-top: 0;
+  }
+  &:last-child{
+    margin-bottom: 0;
   }
 }

@@ -1,16 +1,8 @@
 @import "shared/fonts";
-.dropdown{
-  .dropdownHeader{
-    display: flex;
-    align-items: center;
-    span{
-      @include defaultFont();
-      color: var(--secondary-1-color);
-      font-weight: 400;
-      font-size: 16px;
-    }
-    .drpIcon{
-      margin-left: 10px;
-    }
+.dropdownContainer{
+  position: relative;
+  .dropdown_drop{
+    position: absolute;
+    width: 100%;
   }
 }

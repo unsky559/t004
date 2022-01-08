@@ -19,7 +19,7 @@ const IconBtn = (props) => {
                 </span>
                 </div>
             }
-            <button className={["iconBtn", big, colorful].join(" ")}>
+            <button className={["iconBtn", big, colorful].join(" ")} onClick={props.onClick}>
                 <img src={icon} alt={iconAlt} className="label"/>
                 <img src={hoverLabel} alt={iconAlt} className="hoverLabel"/>
             </button>

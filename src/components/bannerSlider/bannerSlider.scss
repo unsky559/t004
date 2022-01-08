@@ -13,10 +13,10 @@
   & > *{
     @include margDefault();
     &:first-child{
-      margin-left: max(30px, calc((100vw - 1560px) / 2) + 15px);
+      margin-left: max(#{$padding-default * 2}, calc((100vw - #{$containerWidth}) / 2) + #{$padding-default});
     }
     &:last-child{
-      margin-right: max(30px, calc((100vw - 1560px) / 2) + 15px);
+      margin-right: max(#{$padding-default * 2}, calc((100vw - #{$containerWidth}) / 2) + #{$padding-default});
     }
   }
 }

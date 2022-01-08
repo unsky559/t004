@@ -1,0 +1,51 @@
+@import "shared/fonts";
+.dropdownMessage{
+  padding: 15px 25px;
+  display: flex;
+  background-color: var(--main-bg-color);
+
+
+  &:hover, &:focus{
+    background-color: var(--secondary-5-color);
+    cursor: pointer;
+  }
+
+  .userPic{
+    img{
+      margin-right: 15px;
+    }
+  }
+  .content{
+    flex-grow: 1;
+    .contentHeader{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      .username{
+        @include defaultFont();
+        color: var(--secondary-1-color);
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .date{
+        @include defaultFont();
+        color: var(--accent-color);
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .contentBody{
+      width: 100%;
+      .messagePreview{
+        @include smFont();
+        color: var(--secondary-2-color);
+        max-height: 48px;
+        line-height: 24px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}

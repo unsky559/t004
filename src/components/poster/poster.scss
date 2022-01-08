@@ -1,9 +1,9 @@
 @import "shared/fonts";
+@import "shared/animations";
 .poster{
-  $transition: bottom 0.5s cubic-bezier(0,0,0,1);
+  $transition: bottom $defaultTransitionTime $defaultCubic;
   min-width: 340px;
   height: 220px;
-  background: red;
   position: relative;
   overflow: hidden;
 

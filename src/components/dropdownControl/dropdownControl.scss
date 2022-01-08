@@ -1,22 +1,29 @@
 @import "shared/fonts";
 
-.dropdownLangSwitch{
+.dropdownControls{
+  min-width: 200px;
   z-index: 1;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-left: -15px;
   position: absolute;
-  padding: 25px 30px;
+
   border-radius: 3px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--secondary-3-color);
   ul{
+
+    &.pad{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
     li{
-      margin-bottom: 5px;
+      padding: 5px 30px;
+
       &:last-child{
         margin-bottom: 0;
       }
       a{
-        @include defaultFont();
+        @include smFont();
         font-weight: 400;
         color: var(--secondary-4-color);
       }
@@ -25,6 +32,16 @@
           color: var(--secondary-1-color);
         }
       }
+      &.extended{
+        padding: 15px 30px;
+        &:hover{
+          background-color: var(--secondary-5-color);
+          cursor: pointer;
+        }
+      }
     }
+  }
+  .logoutGroup{
+    margin-top: 15px;
   }
 }

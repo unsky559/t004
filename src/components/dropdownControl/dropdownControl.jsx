@@ -1,16 +1,19 @@
 import React from 'react';
-import "./dropdownLangSwitch.scss";
+import "./dropdownControl.scss";
 
-const DropdownLangSwitch = () => {
+const DropdownControl = () => {
     return (
-        <div className="dropdownLangSwitch">
+        <div className="dropdownControls">
+            <ul className="pad">
+                <li className="selected"><a href="#">Account</a></li>
+                <li className="selected"><a href="#">My subscriptions</a></li>
+                <li className="selected"><a href="#">History</a></li>
+            </ul>
             <ul>
-                <li className="selected"><a href="#">Herbrew</a></li>
-                <li><a href="#">asd</a></li>
-                <li><a href="#">asdasd</a></li>
+                <li className="extended"><a href="#">Log out</a></li>
             </ul>
         </div>
     );
 };
 
-export default DropdownLangSwitch;
+export default DropdownControl;

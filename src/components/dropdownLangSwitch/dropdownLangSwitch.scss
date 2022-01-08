@@ -1,0 +1,30 @@
+@import "shared/fonts";
+
+.dropdownLangSwitch{
+  z-index: 1;
+  margin-top: 25px;
+  margin-left: -15px;
+  position: absolute;
+  padding: 25px 30px;
+  border-radius: 3px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--secondary-3-color);
+  ul{
+    li{
+      margin-bottom: 5px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      a{
+        @include defaultFont();
+        font-weight: 400;
+        color: var(--secondary-4-color);
+      }
+      &.selected{
+        a{
+          color: var(--secondary-1-color);
+        }
+      }
+    }
+  }
+}
