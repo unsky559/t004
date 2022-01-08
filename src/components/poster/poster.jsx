@@ -7,6 +7,7 @@ import IconBtn from "../iconBtn/iconBtn";
 const Poster = (props) => {
     const data = props.content;
     const selected = props.selected;
+
     return (
         <div className={["poster", selected ? "selected" : null].join(" ")} onClick={props.onClick}>
             <div className="posterForeground">

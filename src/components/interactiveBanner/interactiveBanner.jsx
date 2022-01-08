@@ -30,6 +30,31 @@ const InteractiveBanner = () => {
             title: "Bad wather",
             description: "lorem askdask dfngldfs gnsdf ngkjsdfg nsdkfn glkjsdfjlgk.",
             imageUrl: "https://images.unsplash.com/photo-1536215987353-f486af56a22e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+            title: "Post name",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
+            imageUrl: "https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+            title: "Poster 2 name",
+            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
+            imageUrl: "https://images.unsplash.com/photo-1626294096822-55e4512bc957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80"
+        },
+        {
+            title: "Span text",
+            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
+            imageUrl: "https://images.unsplash.com/photo-1627486585964-5d582aa47e1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+        },
+        {
+            title: "Banner 5",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
+            imageUrl: "https://images.unsplash.com/photo-1530172888244-f3520bbeaa55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+            title: "Bad wather",
+            description: "lorem askdask dfngldfs gnsdf ngkjsdfg nsdkfn glkjsdfjlgk.",
+            imageUrl: "https://images.unsplash.com/photo-1536215987353-f486af56a22e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         }
     ]
 
@@ -37,6 +62,22 @@ const InteractiveBanner = () => {
     const loadingContentState = useState(false);
 
     const [currentData, newCurrentData] = useState(data[currentPoster[0]]);
+
+    const goNext = () => {
+        if(data.length - 1 === currentPoster[0]){
+            currentPoster[1](0);
+        }else{
+            currentPoster[1](currentPoster[0] + 1);
+        }
+    }
+
+    const goPrev = () => {
+        if(currentPoster[0] === 0){
+            currentPoster[1](data.length - 1);
+        }else{
+            currentPoster[1](currentPoster[0] - 1);
+        }
+    }
 
     useEffect(() => {
         loadingContentState[1](true);
@@ -48,7 +89,6 @@ const InteractiveBanner = () => {
     }, [currentPoster[0]]);
 
     useEffect(() => {
-
         const switchInterval = setInterval(() => {
             if(data.length - 1 === currentPoster[0]){
                 currentPoster[1](0);
@@ -56,11 +96,9 @@ const InteractiveBanner = () => {
                 currentPoster[1](currentPoster[0]+1);
             }
         }, 5000);
-
         return () => {
             clearInterval(switchInterval);
         }
-
     }, [currentPoster[0]])
 
     return (
@@ -82,16 +120,20 @@ const InteractiveBanner = () => {
                     </div>
                 </div>
                 <div className="bottomContent">
+
                     <BannerSlider currentPoster={currentPoster} data={data}/>
+
                     <div className="container">
                         <div className="bottomSlider">
                             <BannerSliderProgress isRun={!loadingContentState[0]}/>
                         </div>
                         <div className="bottomControls">
                             <IconBtn
+                                onClick={goPrev}
                                 hoverLabel="static/icons/arrow_back_hover.png"
                                 icon="static/icons/arrow_back_default.png"/>
                             <IconBtn
+                                onClick={goNext}
                                 hoverLabel="static/icons/arrow_next_hover.png"
                                 icon="static/icons/arrow_next_default.png"/>
                         </div>
