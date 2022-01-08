@@ -6,59 +6,55 @@ import BannerSlider from "../bannerSlider/bannerSlider";
 import BannerSliderProgress from "../bannerSliderProgress/bannerSliderProgress";
 
 const InteractiveBanner = () => {
-    const data = [{
-            title: "Post name",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    const data = [
+        {
+            title: "Henri Pham",
+            description: "We were exploring at night in search of some interesting lights to make use of reflections and flares out of. Funny enough we came across a few neon lights from a fish & chip restaurant and to be honest I didn’t think it would work out this well!",
+            imageUrl: "https://images.unsplash.com/photo-1504131598085-4cca8500b677?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
         },
         {
-            title: "Shrek 2",
-            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
+            title: "Christmas tree",
+            description: "Christmas Tree EXEC was the first widely disruptive computer worm, which paralyzed several international computer networks in December 1987. The virus ran on the IBM VM/CMS operating system.",
+            imageUrl: "https://images.unsplash.com/photo-1641627498987-e0d1e1af3fc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+            title: "City",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur cum cumque esse itaque iure molestias nihil pariatur provident quos.",
+            imageUrl: "https://images.unsplash.com/photo-1641637968245-95471a9c90df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+            title: "Roe deer",
+            description: "Runnin' Down A Dream",
+            imageUrl: "https://images.unsplash.com/photo-1592386367624-ccf3cd60e337?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1522&q=80"
+        },
+        {
+            title: "Shrek",
+            description: "Cool dude, positive. Favorite cartoon of millions. Shrek is a 2001 American computer-animated comedy film loosely based on the 1990 fairy tale picture book of the same name by William Steig.",
             imageUrl: "https://icdn.lenta.ru/images/2020/12/14/15/20201214153333319/pwa_list_rect_1024_b482663c5eb139c66c39134f0f4001e9.jpg"
         },
         {
-            title: "Span text",
-            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1627486585964-5d582aa47e1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+            title: "Wants to work",
+            description: "Typical WEB developer",
+            imageUrl: "https://images.unsplash.com/photo-1494368308039-ed3393a402a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1543&q=80"
         },
         {
-            title: "Banner 5",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1530172888244-f3520bbeaa55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            title: "Legend",
+            description: "My future car",
+            imageUrl: "https://images.unsplash.com/photo-1495013034289-3664878e32f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1508&q=80"
         },
         {
-            title: "Bad wather",
-            description: "lorem askdask dfngldfs gnsdf ngkjsdfg nsdkfn glkjsdfjlgk.",
-            imageUrl: "https://images.unsplash.com/photo-1536215987353-f486af56a22e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            title: "Lovely",
+            description: "It's me if you hire me",
+            imageUrl: "https://img03.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/3/f8/3f81b6ab23e3751d25ee63d098c48c69.png"
         },
         {
-            title: "Post name",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        },
-        {
-            title: "Poster 2 name",
-            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1626294096822-55e4512bc957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80"
-        },
-        {
-            title: "Span text",
-            description: "Lorem asd asd asd ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1627486585964-5d582aa47e1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-        },
-        {
-            title: "Banner 5",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea earum error exercitationem hic minus",
-            imageUrl: "https://images.unsplash.com/photo-1530172888244-f3520bbeaa55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        },
-        {
-            title: "Bad wather",
-            description: "lorem askdask dfngldfs gnsdf ngkjsdfg nsdkfn glkjsdfjlgk.",
-            imageUrl: "https://images.unsplash.com/photo-1536215987353-f486af56a22e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            title: "One more banner",
+            description: "One more description.",
+            imageUrl: "https://images.unsplash.com/photo-1641231431225-b6854b15c2a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         }
     ]
 
-    const currentPoster = useState(3);
+    const currentPoster = useState(0);
     const loadingContentState = useState(false);
 
     const [currentData, newCurrentData] = useState(data[currentPoster[0]]);

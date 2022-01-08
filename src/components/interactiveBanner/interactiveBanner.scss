@@ -33,7 +33,7 @@
       background-size: cover;
       z-index: -1;
 
-      transition: $defaultTransitionTime $defaultCubic;
+      transition: transform $defaultTransitionTime $defaultCubic, opacity $defaultTransitionTime $defaultCubic;
       &.loading{
         opacity: 0;
         transform: translateY(-$padding-default*4);
@@ -74,7 +74,7 @@
         .content{
           @include x(1, 1);
 
-          transition: $defaultTransitionTime $defaultCubic;
+          transition: transform $defaultTransitionTime $defaultCubic, opacity $defaultTransitionTime $defaultCubic;
           &.loading{
             transform: translateY(-$padding-default * 2);
             opacity: 0;
