@@ -2,8 +2,8 @@
 .button{
   @include btnFont();
   color: var(--main-bg-color);
-  padding: 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 3px;
   background-color: var(--accent-color);
 }
 

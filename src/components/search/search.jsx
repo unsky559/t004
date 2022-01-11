@@ -8,7 +8,7 @@ const Search = () => {
             <Dropdown header={
                 <div className="search">
                     <input type="text" placeholder="Search..."/>
-                    <button><img src="../static/icons/icon_search.png" alt=""/></button>
+                    <button><img src="./static/icons/icon_search.png" alt=""/></button>
                 </div>
             }>
                 <div className="searchResults">

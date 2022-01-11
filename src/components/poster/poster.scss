@@ -20,6 +20,10 @@
     }
   }
 
+  &:hover{
+    cursor: pointer;
+  }
+
   .posterForeground{
     position: absolute;
     width: 100%;

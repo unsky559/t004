@@ -75,6 +75,11 @@
           @include x(1, 1);
 
           transition: transform $defaultTransitionTime $defaultCubic, opacity $defaultTransitionTime $defaultCubic;
+
+          padding-left: $padding-default;
+
+          border-left: 4px solid var(--accent-color);
+
           &.loading{
             transform: translateY(-$padding-default * 2);
             opacity: 0;
